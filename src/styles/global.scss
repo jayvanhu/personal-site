@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background-color: black;
+}
+
+h1, h2 {
+	font-weight: normal;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+/**
+ * Used for <a> tags that behave like <div>
+ */
+.link--block {
+	display: block;
+}
+
+button {
+	all: unset;
+	cursor: pointer;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+}
