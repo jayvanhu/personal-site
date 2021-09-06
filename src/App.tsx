@@ -1,45 +1,49 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
+import React from 'react'
 import './App.scss'
+import './styles/global.scss'
 
-function App() {
-	const [count, setCount] = useState(0)
+import { FaFilePdf, FaGithub, FaHeart, FaLinkedin } from 'react-icons/fa'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { SlidingNavbar } from './components/sliding-navbar/sliding-navbar'
+import { contactConfig } from './config'
+import { DiReact } from 'react-icons/di'
+import resumeUrl from '@src/assets/resume-public.pdf'
 
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>Hello Vite + React!</p>
-				<p>
-					<button type="button" onClick={() => setCount((count) => count + 1)}>
-						count is: {count}
-					</button>
-				</p>
-				<p>
-					Edit <code>App.tsx</code> and save to test HMR updates.
-				</p>
-				<p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Learn React
-					</a>
-					{' | '}
-					<a
-						className="App-link"
-						href="https://vitejs.dev/guide/features.html"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Vite Docs
-					</a>
-				</p>
-			</header>
-		</div>
-	)
+
+export default function App() {
+	return <Router basename={ import.meta.env.BASE_URL }>
+		<header className='landing-header'>
+			<DiReact />
+			<SlidingNavbar />
+		</header>
+		<main>
+			<Switch>
+				<Redirect from='/' to='about' exact></Redirect>
+				<Route path='/about'>
+					<section className='blurb'>
+						<h4>Full-Stack <FaHeart className='heart' /> Engineering</h4>
+						<p>React.js, TypeScript, &amp; a variety of backend languages</p>
+					</section>
+					<section className='description'>
+						<h4>I'm Jason Huynh, a curious, eager full-stack engineer.</h4>
+						<p>todo</p>
+					</section>
+				</Route>
+				<Route path='/projects'>
+					<h1>todo</h1>
+				</Route>
+			</Switch>
+		</main>
+		<footer className='footer'>
+			<a href={contactConfig.linkedinLink}>
+				<FaLinkedin />
+			</a>
+			<a href={contactConfig.githubLink}>
+				<FaGithub />
+			</a>
+			<a href={resumeUrl} target='_blank'>
+				<FaFilePdf />
+			</a>
+		</footer>
+	</Router>
 }
-
-export default App
