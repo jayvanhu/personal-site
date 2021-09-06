@@ -3,7 +3,7 @@ import './App.scss'
 import './styles/global.scss'
 
 import { FaFilePdf, FaGithub, FaHeart, FaLinkedin } from 'react-icons/fa'
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { SlidingNavbar } from './components/sliding-navbar/sliding-navbar'
 import { contactConfig } from './config'
 import { DiReact } from 'react-icons/di'
@@ -11,7 +11,7 @@ import resumeUrl from '@src/assets/resume-public.pdf'
 
 
 export default function App() {
-	return <Router basename={ import.meta.env.BASE_URL }>
+	return <Router>
 		<header className='landing-header'>
 			<DiReact />
 			<SlidingNavbar />
