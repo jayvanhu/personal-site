@@ -1,0 +1,63 @@
+.nav-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	max-width: 100%;
+
+	.nav-links {
+		display: flex;
+		gap: 30px;
+		right: 0;
+		width: 0;
+		padding: 0;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		overflow: hidden;
+		transition-property: width padding;
+		transition-duration: 750ms;
+
+		&.active {
+			width: 100%;
+			padding: 0 30px;
+		}
+
+		.nav-link {
+			position: relative;
+			color: white;
+			white-space: nowrap; // prevent text-wrap when hiding navbar
+
+			&::after {
+				transition: width 350ms;
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				bottom: 1px;
+				width: 0px;
+				height: 1px;
+				background-color: white;
+			}
+
+			&:hover {
+				&::after {
+					width: 20px;
+				}
+			}
+
+			&.active {
+				&::after {
+					width: 100%;
+				}
+			}
+
+		}
+
+	}
+
+	.nav-btn {
+		display: inline-flex;
+		align-items: center;
+	}
+
+}
