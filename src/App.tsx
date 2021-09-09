@@ -13,7 +13,7 @@ import resumeUrl from '@src/assets/resume-public.pdf'
 export default function App() {
 	return <Router>
 		<header className='landing-header'>
-			<DiReact />
+			<DiReact className='header-icon' />
 			<SlidingNavbar />
 		</header>
 		<main>

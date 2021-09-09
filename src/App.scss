@@ -13,8 +13,16 @@ body {
 .landing-header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	font-size: 2rem;
 	max-width: 100vw;
+
+	.header-icon {
+		font-size: 3rem;
+		@media (max-width: 1280px) {
+			font-size: 2rem;
+		}
+	}
 
 	@media (max-width: 1280px) {
 		font-size: 1.25em;
@@ -67,7 +75,7 @@ main {
 	align-items: center;
 	gap: 20px;
 	width: max-content;
-	margin: 50px auto;
+	margin: 100px auto 0;
 	border-top: 1px solid white;
 	padding: 10px 100px 0;
 }
