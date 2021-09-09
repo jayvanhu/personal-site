@@ -8,10 +8,13 @@ import { SlidingNavbar } from './components/sliding-navbar/sliding-navbar'
 import { contactConfig } from './config'
 import { DiReact } from 'react-icons/di'
 import resumeUrl from '@src/assets/resume-public.pdf'
+import { ProjectsPage } from './pages/projects'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 
+const queryClient = new QueryClient()
 export default function App() {
-	return <Router>
+	return <QueryClientProvider client={queryClient}><Router>
 		<header className='landing-header'>
 			<DiReact className='header-icon' />
 			<SlidingNavbar />
@@ -30,7 +33,7 @@ export default function App() {
 					</section>
 				</Route>
 				<Route path='/projects'>
-					<h1>todo</h1>
+					<ProjectsPage />
 				</Route>
 			</Switch>
 		</main>
@@ -45,5 +48,5 @@ export default function App() {
 				<FaFilePdf />
 			</a>
 		</footer>
-	</Router>
+	</Router></QueryClientProvider>
 }

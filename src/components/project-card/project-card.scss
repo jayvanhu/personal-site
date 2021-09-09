@@ -1,0 +1,65 @@
+.project-card {
+	position: relative;
+	width: 400px;
+	box-shadow: 1px 1px 3px 0px adjust-color(black, $alpha: -0.5);
+
+	&__title {
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		margin: 0;
+		background-color: adjust-color(black, $alpha: -0.15);
+		box-shadow: 1px 1px 3px 0px adjust-color(black, $alpha: -0.5);
+		font-size: 0.75rem;
+		font-weight: 600;
+		padding: 5px 10px;
+	}
+
+	&__image {
+		display: block;
+		width: 400px;
+		height: 300px;
+		line-height: 100px;
+		text-align: center;
+	}
+
+	&__body {
+		padding: 10px;
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		.tag {
+			$color: white;
+			display: inline-block;
+			padding: 5px 7px;
+			color: $color;
+			border: 1px solid $color;
+			border-radius: 5px;
+
+			&:hover {
+				color: black;
+				background-color: $color;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	&__section {
+		border: 1px solid black;
+		border-bottom: none;
+		margin: 0;
+	}
+
+	&__section:last-child {
+		border-bottom: 1px solid black;
+	}
+
+}
