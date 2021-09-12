@@ -28,8 +28,9 @@ export default function App() {
 						<p>React.js, TypeScript, &amp; a variety of backend languages</p>
 					</section>
 					<section className='description'>
-						<h4>I'm Jason Huynh, a curious, eager full-stack engineer.</h4>
-						<p>todo</p>
+						<h4>Jason Huynh</h4>
+						<p>I'm a curious engineer eager to learn new technologies to grow my skills and apply them as a versatile engineer across both frontend and backend.</p>
+						<p>I care about leaving code better than when I found it and approach coding with an attention for clarity, modularity, and maintainability.</p>
 					</section>
 				</Route>
 				<Route path='/projects'>
