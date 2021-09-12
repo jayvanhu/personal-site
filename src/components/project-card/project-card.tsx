@@ -2,6 +2,7 @@ import React from "react"
 import './project-card.scss'
 
 import { Project } from "@src/models"
+import { Anchor } from "../anchor/Anchor"
 
 export function ProjectCard({ title, img, description, link, sourceCodeLink, tags }: Project) {
 	return <article className='project-card'>
@@ -13,8 +14,8 @@ export function ProjectCard({ title, img, description, link, sourceCodeLink, tag
 			</div>
 			<p>{description}</p>
 			<div className='project-card__links'>
-				{ link ? <a href="todo">Link</a> : null }
-				{ sourceCodeLink ? <a href="asd">Source</a> : null }
+				{ link ? <Anchor href={link}>Link</Anchor> : null }
+				{ sourceCodeLink ? <Anchor href={sourceCodeLink}>Source</Anchor> : null }
 			</div>
 		</section>
 	</article>

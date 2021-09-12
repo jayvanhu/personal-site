@@ -1,0 +1,8 @@
+@import '@src/styles/variables.scss';
+
+.link {
+	color: $link-lightblue;
+	&:hover {
+		text-decoration: underline;
+	}
+}
