@@ -1,6 +1,5 @@
 import personalUrl from '@src/assets/personal.jpg'
-import gitUrl from '@src/assets/github.jpg'
-import { projectsConfig } from "@src/config"
+import discordUrl from '@src/assets/discord-ui.jpg'
 import { Project } from "@src/models"
 
 let _id = -1;
@@ -15,16 +14,24 @@ export function getProjects(): Promise<Project[]> {
 		title: 'Personal Website',
 		img: personalUrl,
 		description: 'This website that you\'re viewing right now.',
-		link: 'todo',
-		sourceCodeLink: 'todo',
+		sourceCodeLink: 'https://github.com/jayvanhu/personal-site',
 		tags: ['React'],
+
+	// Putting this in the backlog
+	// }, {
+	// 	id: id(),
+	// 	title: 'Github Issues Page',
+	// 	img: gitUrl,
+	// 	description: 'A clone of the UI of the Issues page of Github repositories.',
+	// 	// TODO do i actually need a projects config
+	// 	link: projectsConfig.githubIssues,
+	// 	tags: ['WIP', 'React'],
+
 	}, {
 		id: id(),
-		title: 'Github Issues Page',
-		img: gitUrl,
-		description: 'A clone of the UI of the Issues page of Github repositories.',
-		// TODO do i actually need a projects config
-		link: projectsConfig.githubIssues,
+		title: 'Discord UI',
+		img: discordUrl,
+		description: 'A clone of the UI for the Discord voice chat application.',
 		tags: ['WIP', 'React'],
 	}]
 
