@@ -2,7 +2,7 @@ import React from "react"
 import './project-card.scss'
 
 import { Project } from "@src/models"
-import { Anchor } from "../anchor/Anchor"
+import { Anchor } from "../anchor/anchor"
 
 export function ProjectCard({ title, img, description, link, sourceCodeLink, tags }: Project) {
 	return <article className='project-card'>
