@@ -20,6 +20,29 @@
 		&.active {
 			width: 100%;
 			padding: 0 30px;
+
+			@media (max-width: 600px) {
+				// TODO adding overflow makes the sliding animation not look quite right
+				// For now, only enable overflow at small screen width
+				white-space: nowrap;
+				overflow-x: auto;
+
+				// TODO this is causing a slightly odd "bouncing" animation when breakpoint activates
+				gap: 15px;
+				padding: 0 10px;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			height: 11px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 90px;
+			background-color: adjust-color(gray, $alpha: -0.5);
+			&:hover {
+				background-color: gray;
+			}
 		}
 
 		.nav-link {
