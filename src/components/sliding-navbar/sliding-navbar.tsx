@@ -10,7 +10,7 @@ export function SlidingNavbar() {
 	const [isNavActive, setNavActive] = useState(false)
 
 	return <div className="nav-container">
-		<nav className={`nav-links ${classNames({ active: isNavActive })}`} >
+		<nav className={`nav-links ${classNames({ active: isNavActive })}`} aria-label='Site' >
 			<NavLink className='nav-link' activeClassName='active' to='/about'>About</NavLink>
 			&bull;
 			<NavLink className='nav-link' activeClassName='active' to='projects'>Projects / Code Samples</NavLink>

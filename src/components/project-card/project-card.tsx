@@ -8,7 +8,7 @@ export function ProjectCard({ title, img, description, link, sourceCodeLink, tag
 	return <article className='project-card'>
 		<h4 id='aria-project-card__img-label' className='project-card__title'>{title}</h4>
 		<img className='project-card__image project-card__section' src={img} alt='' role='presentation' aria-labelledby='aria-project-card__img-label' />
-		<section className='project-card__body project-card__section'>
+		<div className='project-card__body project-card__section'>
 			<div className='project-card__tags'>
 				{ tags?.map(tag => <span key={tag} className='tag'>{tag}</span>) }
 			</div>
@@ -17,6 +17,6 @@ export function ProjectCard({ title, img, description, link, sourceCodeLink, tag
 				{ link ? <Anchor href={link}>Link</Anchor> : null }
 				{ sourceCodeLink ? <Anchor href={sourceCodeLink}>Source</Anchor> : null }
 			</div>
-		</section>
+		</div>
 	</article>
 }

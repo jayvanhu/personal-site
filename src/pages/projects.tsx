@@ -7,7 +7,7 @@ import { getProjects } from '@src/api'
 
 export function ProjectsPage() {
 	const { data: projects } = useQuery('projects', getProjects)
-	return <section className='project-cards'>
+	return <section className='project-cards' aria-label='Personal Projects and Code Samples'>
 		{
 			projects?.map(project => <ProjectCard key={project.id} {...project}></ProjectCard> )
 		}

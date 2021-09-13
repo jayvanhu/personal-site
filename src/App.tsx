@@ -23,11 +23,11 @@ export default function App() {
 			<Switch>
 				<Redirect from='/' to='about' exact></Redirect>
 				<Route path='/about'>
-					<section className='blurb'>
+					<section className='blurb' aria-label='blurb'>
 						<h4>Full-Stack <FaHeart className='heart' /> Engineering</h4>
 						<p>React.js, TypeScript, &amp; a variety of backend languages</p>
 					</section>
-					<section className='description'>
+					<section className='description' aria-label='description'>
 						<h4>Jason Huynh</h4>
 						<p>I'm a curious engineer eager to learn new technologies to grow my skills and apply them as a versatile engineer across both frontend and backend.</p>
 						<p>I care about leaving code better than when I found it and approach coding with an attention for clarity, modularity, and maintainability.</p>
