@@ -1,6 +1,6 @@
 .project-card {
 	position: relative;
-	width: 400px;
+	width: clamp(0px, 100%, 400px);
 	box-shadow: 1px 1px 3px 0px adjust-color(black, $alpha: -0.5);
 
 	&__title {
@@ -17,8 +17,8 @@
 
 	&__image {
 		display: block;
-		width: 400px;
-		height: 300px;
+		width: 100%;
+		aspect-ratio: 4 / 3;
 		line-height: 100px;
 		text-align: center;
 	}
