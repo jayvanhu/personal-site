@@ -29,7 +29,7 @@ export default function App() {
 					</section>
 					<section className='description' aria-label='description'>
 						<h4>Jason Huynh</h4>
-						<p>I'm a curious engineer eager to learn new technologies to grow my skills and apply them as a versatile engineer across both frontend and backend.</p>
+						<p>I'm a curious, versatile engineer eager to learn new skills &amp; technologies and apply them across both frontend and backend.</p>
 						<p>I care about leaving code better than when I found it and approach coding with an attention for clarity, modularity, and maintainability.</p>
 					</section>
 				</Route>
