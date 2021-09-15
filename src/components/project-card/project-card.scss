@@ -1,4 +1,5 @@
 .project-card {
+	// TODO might need to make this flex to let description grow
 	position: relative;
 	width: clamp(0px, 100%, 400px);
 	box-shadow: 1px 1px 3px 0px adjust-color(black, $alpha: -0.5);
@@ -32,6 +33,7 @@
 		flex-wrap: wrap;
 		gap: 10px;
 
+		// TODO extract?
 		.tag {
 			$color: white;
 			display: inline-block;
@@ -40,6 +42,7 @@
 			border: 1px solid $color;
 			border-radius: 5px;
 
+			// TODO extract?
 			&:hover {
 				color: black;
 				background-color: $color;

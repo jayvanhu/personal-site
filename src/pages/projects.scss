@@ -1,7 +1,20 @@
 .project-cards {
+	// TODO might need to make this a grid
+
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+
+	// display: grid;
+	// // todo autofit
+	// // justify-content: center;
+	// align-items: center;
+	// // TODO the min of minmax needs to match the size I set for the card itself from the card scss
+	// grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	// // grid-template-columns: repeat(auto-fit, 1fr);
+	// width: 100%;
+	// padding: 0 50px;
+
 	gap: 30px;
 	width: 100%;
 }
