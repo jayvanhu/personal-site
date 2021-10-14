@@ -1,4 +1,6 @@
 .project-card {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	width: clamp(0px, 100%, 400px);
 	box-shadow: 1px 1px 3px 0px adjust-color(black, $alpha: -0.5);
@@ -24,6 +26,9 @@
 	}
 
 	&__body {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
 		padding: 10px;
 	}
 
@@ -50,7 +55,7 @@
 	&__links {
 		display: flex;
 		justify-content: space-evenly;
-		margin-top: 20px;
+		margin-top: auto;
 	}
 
 	&__section {
