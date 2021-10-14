@@ -1,5 +1,6 @@
 import personalUrl from '@src/assets/personal.jpg'
 import discordUrl from '@src/assets/discord-ui.jpg'
+import golangBlogUrl from '@src/assets/golang-blog-scrape.jpg'
 import { Project } from "@src/models"
 
 let _id = -1;
@@ -33,6 +34,13 @@ export function getProjects(): Promise<Project[]> {
 		img: discordUrl,
 		description: 'A clone of the UI for the Discord voice chat application.',
 		tags: ['WIP', 'React'],
+	}, {
+		id: id(),
+		title: 'Golang Blog Scraper',
+		img: golangBlogUrl,
+		description: 'A web scraper written in Golang to scrape Joel\'s blog.',
+		tags: ['Golang', 'Scripting'],
+		sourceCodeLink: 'https://github.com/jayvanhu/blog-scrape',
 	}]
 
 	return Promise.resolve(cardProps)
