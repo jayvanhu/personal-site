@@ -32,7 +32,7 @@ export function getProjects(): Promise<Project[]> {
 		id: id(),
 		title: 'Discord UI',
 		img: discordUrl,
-		description: 'A clone of the UI for the Discord voice chat application. Uses Docker to run as a full-stack app to query mock data form a GraphQL backend.',
+		description: 'A clone of the UI for the Discord voice chat application. Uses Docker to run as a full-stack app to query mock data form a GraphQL backend. Built using Test-Driven Development.',
 		tags: ['WIP', 'React', 'Nest.js', 'GraphQL', 'Docker'],
 		sourceCodeLink: 'https://github.com/jayvanhu/discord-ui',
 	}, {
