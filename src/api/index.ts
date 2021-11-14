@@ -14,7 +14,7 @@ export function getProjects(): Promise<Project[]> {
 		id: id(),
 		title: 'Personal Website',
 		img: personalUrl,
-		description: 'This website that you\'re viewing right now. Bulit with accessibility and responsive design in mind. Occasionally updated to apply newly learned frontend skills.',
+		description: 'This website that you\'re viewing right now. Built with accessibility and responsive design in mind. Occasionally updated to apply newly learned frontend skills.',
 		sourceCodeLink: 'https://github.com/jayvanhu/personal-site',
 		tags: ['React'],
 
