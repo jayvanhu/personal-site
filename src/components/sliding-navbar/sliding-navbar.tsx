@@ -9,15 +9,16 @@ import resumeUrl from '@src/assets/resume-public.pdf'
 export function SlidingNavbar() {
 	const [isNavActive, setNavActive] = useState(false)
 
+	// TODO implement arrow key navigation on nav links?
 	return <div className="nav-container">
-		<nav className={`nav-links ${classNames({ active: isNavActive })}`} aria-label='Site' >
-			<NavLink className='nav-link' activeClassName='active' to='/about'>About</NavLink>
+		<nav id='aria-site-nav' className={`nav-links ${classNames({ active: isNavActive })}`} aria-label='Site' aria-hidden={!isNavActive} >
+			<NavLink className='nav-link' activeClassName='active' to='/about' tabIndex={isNavActive ? 0 : -1}>About</NavLink>
 			&bull;
-			<NavLink className='nav-link' activeClassName='active' to='projects'>Projects / Code Samples</NavLink>
+			<NavLink className='nav-link' activeClassName='active' to='projects' tabIndex={isNavActive ? 0 : -1}>Projects / Code Samples</NavLink>
 			&bull;
-			<a href={resumeUrl} className='nav-link' target='_blank' >Resume</a>
+			<a href={resumeUrl} className='nav-link' target='_blank' tabIndex={isNavActive ? 0 : -1} >Resume</a>
 		</nav>
-		<button className='nav-btn' onClick={() => setNavActive(!isNavActive)}>
+		<button className='nav-btn' onClick={() => setNavActive(!isNavActive)} aria-expanded={isNavActive} aria-controls='aria-site-nav' >
 			{
 				isNavActive ?
 				<FaTimes />
