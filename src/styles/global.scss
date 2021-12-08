@@ -27,6 +27,11 @@ a {
 button {
 	all: unset;
 	cursor: pointer;
+
+	&:focus-visible {
+		outline: revert;
+		outline-offset: 1px;
+	}
 }
 
 .flex-col {
