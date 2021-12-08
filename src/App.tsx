@@ -24,7 +24,7 @@ export default function App() {
 				<Redirect from='/' to='about' exact></Redirect>
 				<Route path='/about'>
 					<section className='blurb' aria-label='blurb'>
-						<h4>Full-Stack <FaHeart className='heart' /> Engineering</h4>
+						<h4>Full-Stack <FaHeart role='presentation' className='heart' /> Engineering</h4>
 						<p>React.js, TypeScript, &amp; a variety of backend languages</p>
 					</section>
 					<section className='description' aria-label='description'>
@@ -39,14 +39,14 @@ export default function App() {
 			</Switch>
 		</main>
 		<footer className='footer'>
-			<a href={contactConfig.linkedinLink}>
-				<FaLinkedin />
+			<a href={contactConfig.linkedinLink} aria-label='linkedin'>
+				<FaLinkedin role='presentation' />
 			</a>
-			<a href={contactConfig.githubLink}>
-				<FaGithub />
+			<a href={contactConfig.githubLink} aria-label='github'>
+				<FaGithub role='presentation' />
 			</a>
-			<a href={resumeUrl} target='_blank'>
-				<FaFilePdf />
+			<a href={resumeUrl} target='_blank' aria-label='resume pdf'>
+				<FaFilePdf role='presentation' />
 			</a>
 		</footer>
 	</Router></QueryClientProvider>
