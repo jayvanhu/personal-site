@@ -18,7 +18,7 @@ export function SlidingNavbar() {
 			&bull;
 			<a href={resumeUrl} className='nav-link' target='_blank' tabIndex={isNavActive ? 0 : -1} >Resume</a>
 		</nav>
-		<button className='nav-btn' onClick={() => setNavActive(!isNavActive)} aria-expanded={isNavActive} aria-controls='aria-site-nav' >
+		<button className='nav-btn' onClick={() => setNavActive(!isNavActive)} aria-label='open site nav' aria-expanded={isNavActive} aria-controls='aria-site-nav' >
 			{
 				isNavActive ?
 				<FaTimes />
