@@ -37,10 +37,10 @@ export function getProjects(): Promise<Project[]> {
 		sourceCodeLink: 'https://github.com/jayvanhu/discord-ui',
 	}, {
 		id: id(),
-		title: 'Golang Blog Scraper',
+		title: 'Blog Scraper',
 		img: golangBlogUrl,
-		description: 'A web scraper written in Golang to scrape Joel\'s blog. Utilizes goroutines and rate limiting to scrape the site concurrently and safely. Outputs result to an html file.',
-		tags: ['Golang', 'Scripting'],
+		description: 'A web scraper to scrape Joel Spolsky\'s blog. Several versions of the scraper written in different languages. Utilizes multi-threading/goroutines and rate limiting to scrape the site concurrently and safely. Outputs result to an html file.',
+		tags: ['Golang', 'Python', 'Scripting'],
 		sourceCodeLink: 'https://github.com/jayvanhu/blog-scrape',
 	}]
 
